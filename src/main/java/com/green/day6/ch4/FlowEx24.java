@@ -5,7 +5,7 @@ public class FlowEx24 {
         int i = 11;
         System.out.println("카운트 다운을 시작합니다.");
 
-        while(i-- != 0) {
+        while(--i != 0) {
             System.out.println(i);
 
             for(int z = 0; z < 2_000_000_000; z++) {

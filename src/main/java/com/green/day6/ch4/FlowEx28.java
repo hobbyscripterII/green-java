@@ -7,15 +7,16 @@ public class FlowEx28 {
         Scanner s = new Scanner(System.in);
         int input = 0;
         int answer = (int) (Math.random() * 100) + 1;
+        System.out.println("1 ~ 100 사이의 정수를 입력하세요.");
+        System.out.printf("ANSWER = %d\n", answer);
 
         while (true) {
             input = s.nextInt();
-            if (input < answer || input > answer) {
-                System.out.printf("ANSWER = %d, %s \n", answer, input < answer ? "UP" : "DOWN");
-            } else {
-                System.out.printf("ANSWER = %d, %s \n", answer, "끝");
+            if (input == answer) {
+                System.out.print("끝");
                 break;
             }
+            System.out.printf("ANSWER = %s \n", input < answer ? "UP" : "DOWN");
         }
     }
 }
