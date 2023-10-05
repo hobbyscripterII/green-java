@@ -9,7 +9,7 @@ public class FlowEx32 {
         do {
             System.out.println("원하는 메뉴를 선택하세요.(종료: 0)\n(1) square\n(2) tri\n(3) log");
             val = s.nextInt();
-            if(val >= 4) {
+            if(val >= 4 || val <= -1) {
                 System.out.println("숫자를 잘못 입력하셨습니다.");
                 continue;
             }
