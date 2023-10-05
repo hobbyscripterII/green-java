@@ -13,6 +13,8 @@ public class FlowEx25 {
             // 방법1
             sum += val % 10;
             val /= 10;
+            System.out.printf("sum = {%d}\n", sum);
+            System.out.printf("val = {%d}\n", val);
 
             // 방법2
 //            int modVal = val % 10;
