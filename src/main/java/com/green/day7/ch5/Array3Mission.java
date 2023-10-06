@@ -26,7 +26,8 @@ public class Array3Mission {
             arr2[i] = arr1[i];
         }
 
-        arr2[arr1.length] = 20;
+        // 배열명.length - 1: 길이(length)의 마지막 번호에서 '-1'하면 마지막 인덱스를 가져올 수 있다.(인덱스는 '0'부터 시작하기 때문에)
+        arr2[arr2.length - 1] = 20;
 
         System.out.println("arr2 = " + Arrays.toString(arr2));
     }

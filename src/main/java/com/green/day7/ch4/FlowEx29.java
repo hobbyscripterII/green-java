@@ -8,7 +8,7 @@ public class FlowEx29 {
             int temp = i;
 
             do {
-                int val = temp % 10;
+                int val = temp % 10; // 나머지 값 구하기
                 // val이 0이 아니고 3으로 나누면 0이 될 때
                 if (val != 0 && val % 3 == 0) {
                     System.out.print("짝");

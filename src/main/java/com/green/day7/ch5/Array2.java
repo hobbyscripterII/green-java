@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Array2 {
     public static void main(String[] args) {
-        int[] arr1 = {100, 200};
+        int[] arr1 = {100, 200}; // 레퍼런스 타입은 주소 값이 저장된다.
         int[] arr2 = {5, 10, 15};
 
 //        for (int i = 0; i < arr1.length; i++) {
