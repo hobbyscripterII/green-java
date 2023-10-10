@@ -17,11 +17,11 @@ public class ArrayEx7 {
             // Mission3. 스와핑하기
             int random = (int) (Math.random() * arr.length);
 
-            if(z == random) continue;
+            if(z == random) continue; // 인덱스랑 랜덤 값이 같다면 밑에 코드는 실행되지 않는다.
 
-            int temp = arr[z];
-            arr[z] = arr[random];
-            arr[random] = temp;
+            int temp = arr[z]; // temp에 값을 집어넣는다.
+            arr[z] = arr[random]; // 인덱스에 랜덤 값을 집어넣는다.
+            arr[random] = temp; // 인덱스(랜덤 값)에 백업한 인덱스 값을 넣는다.
         }
 
         System.out.println("arr = " + Arrays.toString(arr));
