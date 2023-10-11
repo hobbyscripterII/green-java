@@ -18,12 +18,17 @@ public class ArrayEx11Result {
 //        cntArr[3]++;
         System.out.println("cntArr[] = " + Arrays.toString(cntArr));
 
-        for (int i = 0; i < LEN; i++) {
-            int val = numArr[i];
-            cntArr[val]++; // cntArr 인덱스의 값을 증가시킨다.
+//        for (int i = 0; i < LEN; i++) {
+//            int val = numArr[i]; // 랜덤 값을 변수에 대입한다.
+//            cntArr[val]++; // cntArr 인덱스의 값을 증가시킨다.(랜덤 값에 일치하는 인덱스의 값을 증가시킨다)
+//
+////            cntArr[val] += 1;
+////            cntArr[val] = cntArr[val] + 1 ;
+//        }
 
-//            cntArr[val] += 1;
-//            cntArr[val] = cntArr[val] + 1 ;
+        for (int i : numArr) {
+            cntArr[i]++;
+            System.out.printf("i = {%d}, cntArr[%d] = {%d}\n", i, i, cntArr[i]);
         }
 
         for (int i = 0; i < LEN; i++) {
