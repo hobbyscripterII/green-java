@@ -2,8 +2,9 @@ package com.green.day10.ch6;
 
 public class TvTest {
     public static void main(String[] args) {
-        // tv1, tv2: 참조변수, 저장되는 값은 주소값
-        Tv tv1 = new Tv(); // new Tv(): 주소값이 복사되는 부분
+        // tv1, tv2: TV 객체만 저장할 수 있는 레퍼런스 변수, 참조변수, 저장되는 값은 주소값
+        // new Tv(): 주소값이 복사되는 부분
+        Tv tv1 = new Tv();
 //        tv1.channel = 10;
 
         Tv tv2 = new Tv();

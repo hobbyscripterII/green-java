@@ -13,7 +13,7 @@ public class MultiArrEx4 {
 
         Scanner s = new Scanner(System.in);
         for (int i = 0; i < words.length; i++) {
-            System.out.printf("%s의 뜻은?", words[i][0]);
+            System.out.printf("Q%d. %s의 뜻은?",i + 1, words[i][0]);
             String result = s.nextLine();
             System.out.printf("%s", result.equals(words[i][1]) ? "정답입니다.\n" : "틀렸습니다. 정답은 " + words[i][1] + "입니다.\n");
         }

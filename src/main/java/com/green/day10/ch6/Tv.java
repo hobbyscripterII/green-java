@@ -2,7 +2,7 @@ package com.green.day10.ch6;
 
 public class Tv {
     // 속성, 멤버 필드, property
-    String color;
+    String color; // null: 주소값이 없다.
     boolean power;
     int channel;
 
