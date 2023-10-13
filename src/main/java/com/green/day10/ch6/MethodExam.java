@@ -5,7 +5,7 @@ public class MethodExam {
         System.out.printf("%s\n", i == 0 ? "0입니다." : "0이 아닙니다.");
     }
 
-    int randomValFromTo(int n1, int n2) {
+    public int randomValFromTo(int n1, int n2) {
         return (int) (Math.random() * (n2 - n1 + 1)) + n1;
     }
 

@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class FlowEx5 {
     public static void main(String[] args) {
-        int score = 0;
         System.out.println("점수를 입력하세요.");
         Scanner s = new Scanner(System.in);
-        score = s.nextInt();
+        int score = s.nextInt();
 
         String str_ = String.valueOf(score);
         String str = str_.substring(1, 2);
