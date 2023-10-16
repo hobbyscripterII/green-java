@@ -1,8 +1,12 @@
 package com.green.day12.ch6;
 
 public class Card {
-    String kind;
-    String number;
+    public String kind;
+    public String number;
+
+    public void printYourSelf() {
+        System.out.printf("%s (%s)\n", kind, number);
+    }
 
     int getScore() {
         int result = 0;
