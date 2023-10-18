@@ -19,7 +19,7 @@ public class Card {
         return str;
     }
 
-    static Card[] createCards() {
+    Card[] createCards() {
         Card[] cards = new Card[LENGTH * 4];
         String[] patterns = {"Spade", "Heart", "Diamond", "Club"};
         int cnt = 0;
@@ -36,9 +36,10 @@ public class Card {
     }
 
     public static void main(String[] args) {
-        Card[] cards = createCards();
-        for (Card card : cards) {
-            card.printCards();
+        Card card = new Card();
+        Card[] cards = card.createCards();
+        for (Card c : cards) {
+            c.printCards();
         }
     }
 }

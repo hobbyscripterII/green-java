@@ -1,7 +1,7 @@
 package com.green.day14.ch6;
 
 public class CardDeck {
-    Card[] cards;
+    Card[] cards; // 카드 배열의 주소값을 저장할 수 있다.
 
     void printAll() {
 //        for (Card card : cards) {

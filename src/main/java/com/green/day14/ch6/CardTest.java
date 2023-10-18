@@ -12,6 +12,5 @@ public class CardTest {
             Card card = cardDeck.getCard();
             card.printMySelf();
         }
-        System.out.println("--------------------");
     }
 }
