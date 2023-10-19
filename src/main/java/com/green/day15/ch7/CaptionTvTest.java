@@ -1,6 +1,7 @@
 package com.green.day15.ch7;
 
 class Tv {
+    // 속성, 전역변수: 객체가 살아있을 동안에 계속 유지된다.
     boolean power;
     int channel;
 

@@ -3,12 +3,10 @@ package com.green.day15.ch7;
 class Card {
     static final int KIND_MAX = 4;
     static final int NUM_MAX = 13;
-
     static final int SPADE = 4;
     static final int DIAMOND = 3;
     static final int HEART = 2;
     static final int CLOVER = 1;
-
     int kind, number;
 
     public Card() {
@@ -23,7 +21,7 @@ class Card {
 
 class Deck extends Card {
     final int CARD_NUM = 52;
-    Card[] arr = new Card[CARD_NUM]; // 명시적 초기화
+    Card[] arr = new Card[CARD_NUM]; // // 카드 객체의 주소값만 담을 수 있는 배열, 명시적 초기화
 
     public Deck() {
         init();
@@ -42,10 +40,10 @@ class Deck extends Card {
         }
     }
 
-    @Override
-    public String toString() { // Object의 'toString'을 오버라이딩한다.
-        return String.format("kind = %d, number = %d\n", kind, number);
-    }
+//    @Override
+//    public String toString() { // Object의 'toString'을 오버라이딩한다.
+//        return String.format("kind = %d, number = %d\n", kind, number);
+//    }
 
     void printCard() {
         for (Card card : arr) {
@@ -60,20 +58,23 @@ class Deck extends Card {
     Card pick() {
         return arr[(int) (Math.random() * (CARD_NUM))];
     }
+
+    void shuffle() {
+        for (int i = 0; i < CARD_NUM; i++) {
+            int random = (int) (Math.random() * CARD_NUM);
+            Card card = arr[i]; // 백업
+            arr[i] = arr[random];
+            arr[random] = card;
+        }
+    }
 }
 
 public class DeckTest {
     public static void main(String[] args) {
         Deck deck = new Deck();
+        deck.shuffle();
+
         // 검증
-//        deck.printCard();
-
-        Card card1 = deck.pick(10);
-        Card card2 = deck.pick(51);
-//        System.out.println(card1.kind + " " + card1.number);
-//        System.out.println(card2.kind + " " + card2.number);
-
-        Card card = deck.pick();
-        System.out.println(card.kind + " " + card.number);
+        deck.printCard();
     }
 }
