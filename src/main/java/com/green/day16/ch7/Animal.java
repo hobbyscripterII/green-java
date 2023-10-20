@@ -65,6 +65,7 @@ class AnimalTest2 {
     }
 
     private static void callCrying(Animal animal) {
+        // 타입(animal)이 객체로 형변환 가능하면 true, 아니면 false
         if (animal instanceof BullDog) {
             BullDog bullDog = (BullDog) animal;
             bullDog.jump();
