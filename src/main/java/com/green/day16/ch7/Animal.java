@@ -49,7 +49,7 @@ class AnimalTest {
         // 4. 호출이 된다면 객체 기준이다.
         BullDog bullDog = new BullDog();
         bullDog.jump();
-        bullDog.crying(); // 가장 빨리만나는 객체 기준으로 실행된다.(bullDog에 없으면 dog -> Animal순으로 올라간다)
+        bullDog.crying(); // BullDog의 crying()이 실행된다. 가장 빨리만나는 객체 기준으로 실행된다.(bullDog에 없으면 dog -> Animal순으로 올라간다)
     }
 }
 
@@ -65,7 +65,9 @@ class AnimalTest2 {
     }
 
     private static void callCrying(Animal animal) {
-        // 타입(animal)이 객체로 형변환 가능하면 true, 아니면 false
+        // animal: 1. Bulldog 2. Cat
+        // 1. BullDog이 Bulldog으로 형변환이 가능한가?
+        // 2. Cat이 Bulldog으로 형변환이 가능한가?
         if (animal instanceof BullDog) {
             BullDog bullDog = (BullDog) animal;
             bullDog.jump();

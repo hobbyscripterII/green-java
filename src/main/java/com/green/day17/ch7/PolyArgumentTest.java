@@ -35,6 +35,7 @@ class Product {
 
 class Tv extends Product {
     public Tv() {
+//        super(); // 부모 클래스에 기본 생성자가 없으면 에러가 발생한다.
         super(100);
         setProduct("TV");
     }
