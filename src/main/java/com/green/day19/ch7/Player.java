@@ -22,14 +22,14 @@ class VideoPlayer extends Player {
 abstract class DVDPlayer extends Player {
 }
 
-class PalyerTest {
+class PlayerTest {
     public static void main(String[] args) {
         AudioPlayer audioPlayer = new AudioPlayer();
         audioPlayer.play(10);
         VideoPlayer videoPlayer = new VideoPlayer();
         videoPlayer.play(20);
 //        Player player = new Player(); // ERROR
-        Player player = audioPlayer; // 다형성
+        Player player = audioPlayer; // 다형성, audioPlayer는 자식이기 때문에 부모 타입인 Player를 담을 수 있다.
         player.play(30);
         player = videoPlayer; // 다형성
         player.play(40);
