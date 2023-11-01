@@ -55,4 +55,9 @@ public class BoardEntity {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    @Override
+    public String toString() {
+        return iboard + " | " + title + " | " + ctnts + " | " + writer + " | " + createdAt + " | " + updatedAt;
+    }
 }
