@@ -13,8 +13,13 @@ public class BoardDao {
         // 방법 1
 //        String sql = String.format("INSERT INTO BOARD(TITLE, CTNTS, WRITER) VALUES('%s', '%s', '%s')", entity.getTitle(), entity.getCtnts(), entity.getWriter());
         // 방법 2
-        String sql = "INSERT INTO BOARD(TITLE, CTNTS, WRITER) VALUES(?, ?, ?)";
+//        String sql = "INSERT INTO BOARD(TITLE, CTNTS, WRITER) VALUES(?, ?, ?)";
+        // + 추가(2023.11.02)
+        String sql = "INSERT INTO BOARD SET TITLE = ?, CTNTS = ?, WRITER = ?";
         Connection c = null;
+        // PreparedStatement의 기능
+        // 1. `문자열` 타입은 자동으로 홑따옴표를 붙여주고, `정수`는 정수 타입으로 값이 들어간다.
+        // 2. (Statement를 상속받은 인터페이스)
         PreparedStatement ps = null;
         try {
             c = MyConnection.getConnection();
@@ -26,7 +31,7 @@ public class BoardDao {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            MyConnection.close(c, ps);
+            MyConnection.close(c, ps); // 자원 반납
         }
         return result;
     }
@@ -70,6 +75,8 @@ public class BoardDao {
         return result;
     }
 
+    // List는 검색, 페이징 등에 사용된다.
+    // 모든 언어의 메소드 리턴 값은 무조건 주소값 `1개`다.
     public static List<BoardEntity> selBoardList() {
         List<BoardEntity> list = new ArrayList();
         String sql = "SELECT IBOARD, TITLE, WRITER, CREATED_AT FROM BOARD";
@@ -111,6 +118,7 @@ public class BoardDao {
             ps = c.prepareStatement(sql);
             ps.setInt(1, iboard);
             rs = ps.executeQuery();
+            // rs.next(): 반환 타입 - boolean, 다음 줄을 선택한다.
             if (rs.next()) {
                 entity.setIboard(rs.getInt("iboard"));
                 entity.setTitle(rs.getString("title"));
